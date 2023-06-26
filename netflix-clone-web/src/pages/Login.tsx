@@ -9,7 +9,6 @@ export function Login() {
 
   function handleSignUp(email: string) {
     setSignUpEmail(email)
-    console.log(email)
     setAuthComponent(true)
   }
 
