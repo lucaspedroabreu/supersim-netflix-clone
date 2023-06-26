@@ -15,6 +15,7 @@ function Home() {
       {/* TODO link springboot api to fetch personal movies */}
       {personalMovies && <GenreMovieRow title="My personal movies" fetchURL={"https://ADD"} isFeaturedRow />}
 
+      <main className='mt-10'>
       <GenreMovieRow title="NETFLIX ORIGINALS" fetchURL={axiosRequestList.fetchNetflixOriginals} isFeaturedRow />
       <GenreMovieRow title="Trending now" fetchURL={axiosRequestList.fetchTranding} />
       <GenreMovieRow title="Top Rated" fetchURL={axiosRequestList.fetchTopRated} />
@@ -23,6 +24,7 @@ function Home() {
       <GenreMovieRow title="Horror Movies" fetchURL={axiosRequestList.fetchHorrorMovies} />
       <GenreMovieRow title="Romance Movies" fetchURL={axiosRequestList.fetchRomanceMovies} />
       <GenreMovieRow title="Documentaries" fetchURL={axiosRequestList.fetchDocumentaries} />
+      </main>
       <div className="screen--fadeBottom w-screen fixed bottom-0" />
     </>
   )
