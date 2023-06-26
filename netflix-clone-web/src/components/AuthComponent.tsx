@@ -1,7 +1,6 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import type { FormEvent } from 'react'
 
-import { useNavigate } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth/cordova'
 
 type AuthComponentProps = {
@@ -15,7 +14,6 @@ export function AuthComponent({ email }: AuthComponentProps) {
   const [passwordConfirmation, setPasswordConfirmation] = useState('')
 
   const auth = getAuth()
-  const navigate = useNavigate()
   
   const [formError, setFormError] = useState({
     email: '',
