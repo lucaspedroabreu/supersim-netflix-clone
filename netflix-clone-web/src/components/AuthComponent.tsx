@@ -35,9 +35,12 @@ export function AuthComponent({ email }: AuthComponentProps) {
           ...formError,
           passwordConfirmation: "Passwords do not match"
         })
+      } else {
+        auth.createUserWithEmailAndPassword(emailInput, passwordRef.current.value)
       }
+      
     } else {
-
+      
     }
   }
 

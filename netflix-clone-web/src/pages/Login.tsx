@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react'
+import { useState } from 'react'
 import NetflixLogo from '../assets/netflix-logo.png'
 import {CTAComponent} from '../components/CTAComponent'
 import { AuthComponent } from '../components/AuthComponent'
@@ -12,7 +12,7 @@ export function Login() {
     console.log(email)
     setAuthComponent(true)
   }
-  
+
   return (
     <div className="login-screen relative h-screen w-full">
       <div className="login-screen__background ">
