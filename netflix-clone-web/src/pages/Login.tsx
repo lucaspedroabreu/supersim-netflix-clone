@@ -5,10 +5,8 @@ import { AuthComponent } from '../components/AuthComponent'
 
 export function Login() {
   const [authComponent, setAuthComponent] = useState(false)
-  const [signUpEmail, setSignUpEmail] = useState("")
 
-  function handleSignUp(email: string) {
-    setSignUpEmail(email)
+  function handleSignUp() {
     setAuthComponent(true)
   }
 
@@ -22,7 +20,7 @@ export function Login() {
       <main className='login-screen__body z-10 text-white p-5 absolute top-[30%] w-full text-center'>
         {
           authComponent ? (
-            <AuthComponent email={signUpEmail} />
+            <AuthComponent />
           ) : (
             <CTAComponent signUp={handleSignUp}/>
           )

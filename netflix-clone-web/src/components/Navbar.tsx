@@ -9,6 +9,12 @@ export function Navbar() {
 
   const loggedUser = auth.currentUser
 
+  async function handleLogout() {
+    console.log("Signing out")
+    await signOut(auth)
+    console.log("Signed out")
+  }
+
   const transitionHeaderBg = () => {
     (window.scrollY > 100) ? setScrolled(true) : setScrolled(false)
   }
@@ -22,7 +28,9 @@ export function Navbar() {
     <header id="header" className={`nav ${scrolled && "nav__scrolled"}`}>
       <div className="nav__contents">
         <img className='nav__logo' src={NetflixLogo} alt="Netflix" />
-        <img onClick={() => signOut(auth)} className='nav__avatar' src={NetflixAvatar} alt="User avatar" />
+        <button onClickCapture={() => handleLogout}>
+        <img className='nav__avatar' src={NetflixAvatar} alt="User avatar" />
+        </button>
       </div>
     </header>
   )

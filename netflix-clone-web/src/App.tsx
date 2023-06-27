@@ -21,7 +21,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         {
           !loggedUser ? 
-          <Login /> :
+          <><Login /><span>{loggedUser}</span></> :
           <Routes>
               <Route path="/" element={<Home />} />
           </Routes>
